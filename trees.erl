@@ -25,11 +25,11 @@ member(X, {node, L, Y, R}) ->
 
 %% insert
 
-insert(X, leaf) ->
-  {node, leaf, X, leaf};
-insert(X, {node, L, Y, R}) ->
-  if X < Y ->
-      {node, insert(X, L), Y, R};
-     X >= Y ->
-      {node, L, Y, insert(X, R)}
-  end.
+%% insert(X, leaf) ->
+%%   {node, leaf, X, leaf};
+%% insert(X, {node, L, Y, R}) ->
+%%   if X < Y ->
+%%       {node, insert(X, L), Y, R};
+%%      X >= Y ->
+%%       {node, L, Y, insert(X, R)}
+%%   end.

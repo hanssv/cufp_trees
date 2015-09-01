@@ -27,12 +27,12 @@ prop_member() ->
   ?FORALL({X, T},{nat(), tree()},
           equals(trees:member(X, T), lists:member(X, trees:to_list(T)))).
 
-prop_insert() ->
-  ?FORALL({X, T}, {nat(), tree()},
-    begin
-      L = trees:to_list(trees:insert(X, T)),
-      equals(L, lists:umerge([X], trees:to_list(T)))
-    end).
+%% prop_insert() ->
+%%   ?FORALL({X, T}, {nat(), tree()},
+%%     begin
+%%       L = trees:to_list(trees:insert(X, T)),
+%%       equals(L, lists:umerge([X], trees:to_list(T)))
+%%     end).
 
 %% -- Auxillary functions ----------------------------------------------------
 ordered(Xs) ->
